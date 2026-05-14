@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structure of the Neuron - Interactive Task</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f7ed;
+        }
+        .custom-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+        .correct {
+            border-color: #22c55e !important;
+            background-color: #f0fdf4 !important;
+            color: #166534 !important;
+        }
+        .incorrect {
+            border-color: #ef4444 !important;
+            background-color: #fef2f2 !important;
+            color: #991b1b !important;
+        }
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.5rem center;
+            background-size: 1em;
+            padding-right: 2.5rem;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8 flex items-center justify-center min-h-screen">
+
+    <div class="max-w-4xl w-full bg-white rounded-2xl custom-shadow overflow-hidden">
+        <!-- Header -->
+        <div class="bg-slate-800 p-6 text-white text-center">
+            <h1 class="text-2xl font-bold flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+                Structure of the Neuron
+            </h1>
+        </div>
+
+        <!-- Instructions -->
+        <div class="p-6 bg-slate-50 border-b border-slate-100">
+            <div class="bg-white p-4 rounded-xl border border-slate-200 text-slate-700 leading-relaxed shadow-sm">
+                <p class="font-semibold mb-1">Task:</p>
+                The statements refer to the parts of the figure labeled with letters. Choose the correct letter from the dropdown menu for each statement!
+            </div>
+        </div>
+
+        <div class="p-6 flex justify-center bg-white">
+            <div class="relative max-w-lg w-full group">
+                <img 
+                    src="neuron-labelled.jpg" 
+                    alt="Diagram of a neuron with labels A (dendrites), B (soma), C (myelin), D (axon), E (terminals)" 
+                    class="w-full rounded-lg transition-transform duration-300 group-hover:scale-[1.02]"
+                    onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Neuron+Diagram+Missing'"
+                >
+            </div>
+        </div>
+
+        <div class="p-6 space-y-3">
+            <form id="quizForm" class="space-y-3">
+                
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-200 transition-colors">
+                    <span class="text-slate-700 mb-2 sm:mb-0">1. They increase the receptive surface of the nerve cell many times over.</span>
+                    <select data-answer="A" class="w-full sm:w-24 px-3 py-2 bg-white border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-green-400 transition-all font-bold">
+                        <option value="">--</option>
+                        <option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-200 transition-colors">
+                    <span class="text-slate-700 mb-2 sm:mb-0">2. Synaptic vesicles are formed in this part of the cell.</span>
+                    <select data-answer="B" class="w-full sm:w-24 px-3 py-2 bg-white border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-green-400 transition-all font-bold">
+                        <option value="">--</option>
+                        <option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-200 transition-colors">
+                    <span class="text-slate-700 mb-2 sm:mb-0">3. This is where the emptying of synaptic vesicles occurs.</span>
+                    <select data-answer="E" class="w-full sm:w-24 px-3 py-2 bg-white border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-green-400 transition-all font-bold">
+                        <option value="">--</option>
+                        <option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-200 transition-colors">
+                    <span class="text-slate-700 mb-2 sm:mb-0">4. It insulates the nerve cell from its environment.</span>
+                    <select data-answer="C" class="w-full sm:w-24 px-3 py-2 bg-white border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-green-400 transition-all font-bold">
+                        <option value="">--</option>
+                        <option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-200 transition-colors">
+                    <span class="text-slate-700 mb-2 sm:mb-0">5. The long process of the nerve cell.</span>
+                    <select data-answer="D" class="w-full sm:w-24 px-3 py-2 bg-white border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-green-400 transition-all font-bold">
+                        <option value="">--</option>
+                        <option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-200 transition-colors">
+                    <span class="text-slate-700 mb-2 sm:mb-0">6. Dendrites.</span>
+                    <select data-answer="A" class="w-full sm:w-24 px-3 py-2 bg-white border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-green-400 transition-all font-bold">
+                        <option value="">--</option>
+                        <option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-200 transition-colors">
+                    <span class="text-slate-700 mb-2 sm:mb-0">7. Composed of glial cells.</span>
+                    <select data-answer="C" class="w-full sm:w-24 px-3 py-2 bg-white border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-green-400 transition-all font-bold">
+                        <option value="">--</option>
+                        <option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-200 transition-colors">
+                    <span class="text-slate-700 mb-2 sm:mb-0">8. Can be part of a synapse formed with other nerve cells.</span>
+                    <select data-answer="E" class="w-full sm:w-24 px-3 py-2 bg-white border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-green-400 transition-all font-bold">
+                        <option value="">--</option>
+                        <option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-200 transition-colors">
+                    <span class="text-slate-700 mb-2 sm:mb-0">9. Can be part of a synapse formed with muscle and gland cells.</span>
+                    <select data-answer="E" class="w-full sm:w-24 px-3 py-2 bg-white border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-green-400 transition-all font-bold">
+                        <option value="">--</option>
+                        <option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-200 transition-colors">
+                    <span class="text-slate-700 mb-2 sm:mb-0">10. Part of a nerve fiber.</span>
+                    <select data-answer="D" class="w-full sm:w-24 px-3 py-2 bg-white border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-green-400 transition-all font-bold">
+                        <option value="">--</option>
+                        <option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option>
+                    </select>
+                </div>
+
+                <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div id="statusMsg" class="text-sm font-medium transition-all opacity-0"></div>
+                    <div class="flex gap-2">
+                        <button type="button" onclick="resetTask()" class="px-6 py-3 bg-slate-200 text-slate-700 font-bold rounded-xl hover:bg-slate-300 transition-all shadow-sm">
+                            Reset
+                        </button>
+                        <button type="button" onclick="checkAnswers()" class="px-8 py-3 bg-green-500 text-white font-bold rounded-xl hover:bg-green-600 transition-all shadow-md active:scale-95">
+                            Check Answers
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Footer Score -->
+        <div id="scoreBanner" class="hidden p-4 bg-slate-800 text-white text-center font-bold text-lg">
+            Score: <span id="scoreVal">0</span> / 10
+        </div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            const selects = document.querySelectorAll('select');
+            const statusMsg = document.getElementById('statusMsg');
+            const scoreBanner = document.getElementById('scoreBanner');
+            const scoreVal = document.getElementById('scoreVal');
+            let correctCount = 0;
+            let total = selects.length;
+
+            selects.forEach(select => {
+                const selectedValue = select.value;
+                const correctAnswer = select.getAttribute('data-answer');
+
+                if (selectedValue === correctAnswer) {
+                    select.classList.remove('incorrect');
+                    select.classList.add('correct');
+                    correctCount++;
+                } else if (selectedValue === "") {
+                    select.classList.remove('correct', 'incorrect');
+                } else {
+                    select.classList.remove('correct');
+                    select.classList.add('incorrect');
+                }
+            });
+
+            // Update UI feedback
+            statusMsg.textContent = correctCount === total ? "Perfect! Well done." : "Check your answers and try again.";
+            statusMsg.className = `text-sm font-bold opacity-100 ${correctCount === total ? 'text-green-600' : 'text-slate-600'}`;
+            
+            scoreBanner.classList.remove('hidden');
+            scoreVal.textContent = correctCount;
+
+            if (correctCount === total) {
+                // Celebrate!
+                scoreBanner.classList.add('bg-green-600');
+                scoreBanner.classList.remove('bg-slate-800');
+            } else {
+                scoreBanner.classList.add('bg-slate-800');
+                scoreBanner.classList.remove('bg-green-600');
+            }
+        }
+
+        function resetTask() {
+            const selects = document.querySelectorAll('select');
+            selects.forEach(select => {
+                select.value = "";
+                select.classList.remove('correct', 'incorrect');
+            });
+            document.getElementById('statusMsg').className = 'opacity-0';
+            document.getElementById('scoreBanner').classList.add('hidden');
+        }
+
+        /* 
+           Keyboard accessibility: 
+           Allowing 'Enter' key to trigger check if focusing a select 
+        */
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && e.target.tagName === 'SELECT') {
+                checkAnswers();
+            }
+        });
+    </script>
+</body>
+</html>
